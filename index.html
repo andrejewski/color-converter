@@ -1,0 +1,110 @@
+<!doctype html>
+<html>
+<head>
+  <title>Color Converter</title>
+  <link rel='stylesheet' href='assets/style.css'>
+</head>
+<body>
+  <div class='modal-container'>
+    <div class='modal'>
+    <div class='conversions'>
+      <div class='color-format'>
+        <div class='color-format-name'>
+          <p title='Hexidecimal'>Hex</p>
+        </div>
+        <div class='color-format-input'>
+          <input id='hex' type='text' placeholder='Hexidecimal'/>
+        </div>
+      </div>
+
+      <div class='color-format'>
+        <div class='color-format-name'>
+          <p title='Red-Green-Blue'>RGB</p>
+        </div>
+        <div class='color-format-input'>
+          <input id='rgb-r' type='text' placeholder='Red'/>
+          <input id='rgb-g' type='text' placeholder='Green'/>
+          <input id='rgb-b' type='text' placeholder='Blue'/>
+        </div>
+      </div>
+
+      <div class='color-format'>
+        <div class='color-format-name'>
+          <p title='Cyan-Magenta-Yellow-Black'>CMYK</p>
+        </div>
+        <div class='color-format-input'>
+          <input id='cmyk-c' type='text' placeholder='Cyan'/>
+          <input id='cmyk-m' type='text' placeholder='Magenta'/>
+          <input id='cmyk-y' type='text' placeholder='Yellow'/>
+          <input id='cmyk-k' type='text' placeholder='Black'/>
+        </div>
+      </div>
+
+      <div class='color-format'>
+        <div class='color-format-name'>
+          <p title='Hue-Saturation-Value'>HSV</p>
+        </div>
+        <div class='color-format-input'>
+          <input id='hsv-h' type='text' placeholder='Hue'/>
+          <input id='hsv-s' type='text' placeholder='Saturation'/>
+          <input id='hsv-v' type='text' placeholder='Value'/>
+        </div>
+      </div>
+
+      <div class='color-format'>
+        <div class='color-format-name'>
+          <p title='Custom Color Format'>Custom</p>
+        </div>
+        <div class='color-custom-field'>
+          <div class='color-format-input'>
+            <input id='custom' type='text' placeholder'See color flags'/>
+          </div>
+          <img 
+            id='flag-list-toggle' class='flag-icon' src='assets/flag.png'
+            title='Show color variables'/>
+          <p class='color-custom-output' id='output'></p>
+        </div>
+      </div>
+
+      <div class='custom-format-view hidden'>
+        <label>Common Forms</label>
+        <ul class='format-list'>
+          <li>rgb(%r, %g, %b)</li>
+          <li>rgba(%r, %g, %b, 1)</li>
+          <li>#%x</li>
+          <li>#ff%x</li>
+          <!-- <li>[UIColor colorWithRed:(%r/255.0) green:(%g/255.0) blue:(%b/255.0) alpha:1]</li> -->
+        </ul>
+      </div>
+    </div>
+
+
+    <div class='flag-list-view hidden'>
+      <label>Color variables</label>
+      <ul class='flag-list'>
+        <li><code>%x</code> <span class='hex-outlet'></span> <i></i> hex</li>
+
+        <li><code>%r</code> <span class='rgb-r-outlet'></span> <i></i> red</li>
+        <li><code>%g</code> <span class='rgb-g-outlet'></span> <i></i> green</li>
+        <li><code>%b</code> <span class='rgb-b-outlet'></span> <i></i> blue</li>
+
+        <li><code>%c</code> <span class='cmky-c-outlet'></span> <i></i> cyan</li>
+        <li><code>%m</code> <span class='cmky-m-outlet'></span> <i></i> magenta</li>
+        <li><code>%y</code> <span class='cmky-y-outlet'></span> <i></i> yellow</li>
+        <li><code>%k</code> <span class='cmky-k-outlet'></span> <i></i> black</li>
+
+        <li><code>%h</code> <span class='hsv-h-outlet'></span> <i></i> hue</li>
+        <li><code>%s</code> <span class='hsv-s-outlet'></span> <i></i> saturation</li>
+        <li><code>%v</code> <span class='hsv-v-outlet'></span> <i></i> value</li>
+      </ul>
+    </div>
+
+    </div>
+  </div>
+
+  <script src='assets/jquery-1.12.0.min.js'></script>
+  <script src='assets/color.js'></script>
+  <script src='assets/index.js'></script>
+</body>
+</html>
+
