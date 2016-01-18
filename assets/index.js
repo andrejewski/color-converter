@@ -9,10 +9,14 @@ $('#flag-list-toggle').on('click', function() {
 
 $('.format-list li').on('click', function() {
   $('#custom').val($(this).text());
-  customSetter(color.hexToRgb($('#hex').val()));
+  customSetter(color.hexToRgb([$('#hex').val()]));
 });
 
 $('#custom').val('rgb(%r, %g, %b)');
+
+setTimeout(function() {
+  $('#hex').val('20a0ff').keyup();
+}, 10);
 
 function Val(inputSel, mirrorSel, writeOnly) {
   var value = null;
