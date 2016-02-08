@@ -101,6 +101,7 @@ header {
   font-size: 1em;
   padding: 8px;
   outline: none;
+  width: 70px;
 }
 
 .color-format-input > input:focus {
